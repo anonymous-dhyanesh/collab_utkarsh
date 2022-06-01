@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+ 
+ 
+    <script src="assets/particles.min.js"></script>
+    <script src="assets/vanilla-tilt.js"></script>
+    <title>Register Now!</title>
+  <link rel="stylesheet" href="/assets/index.8f51c7f4.css">
+</head>
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+</style>
+
+<body class="select-none animate animate-slide-in-blurred-top">
+    
+    <div class="us  bg-cover h-screen w-screen relative justify-center items-center flex  " style="background-image: url(/assets/g4.5681a2dd.svg)"  >
+       <canvas class="background absolute "> </canvas>
+ <!-- <div class=" bg-gray-100 backdrop-filter bg-opacity-10 backdrop-blur-sm h-screen w-screen absolute ">  </div> -->
+            
+            <div class="us justify-center items-center flex pt-[rem]">
+                <div
+                class="card relative  bg-white backdrop-filter bg-opacity-20 rounded-xl sm:h-96 h-[23rem] w-[23rem] sm:w-96 border border-gray-200 backdrop-blur-sm border-opacity-30 border-r-0 border-b-0">
+                <p
+                class="text-3xl leading-10 font-poppins font-semibold tracking-wider text-center bg-gradient-to-r bg-clip-text text-transparent to-gray-50 from-red-400 mt-[2rem]">
+                Register To Utkarsh
+            </p>
+            <div class="flex justify-center items-center pt-[3rem] flex-col">
+                <input type="text" maxlength="20" placeholder=" Name "
+                class=" font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-red-400 focus:outline-none placeholder-gray-300 w-[] caret-red-400 " />
+            <input type="number" maxlength="10"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            placeholder=" Phone Number "
+            class="mt-[2rem] appearance-none text-white font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-fuchsia-400 focus:outline-none placeholder-gray-300 w-[]" />
+            <input type="password" placeholder=" Password "
+            class="mt-[2rem] text-white font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-teal-400 focus:outline-none placeholder-gray-300 w-[]" />
+            <button onclick="us()"
+            class="mt-[3rem] bg-fuchsia-600 px-8 py-1 rounded-full text-white font-semibold hover:bg-fuchsia-500">
+            Register Now!
+        </button>
+    </div>
+    <a href="/index.html">
+        <p class="flex text-sky-200 font-semibold italic justify-center items-center mt-[3rem]">
+            Already have an account?
+        </p>
+    </a>
+</div>
+</div>
+
+</div>
+
+        
+        
+       
+        <script src="/particles.min.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 25,
+                speed: 100,
+            transition: true,
+        });
+        
+        function us() {
+            window.open("../index.html", "_self");
+        }
+        window.onload = function() {
+        Particles.init({
+          selector: '.background',
+          color: '#75A5B7',
+          maxParticles: 130,
+          connectParticles: true,
+          sizeVariations: 10,
+          speed: 1,
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 80
+              }
+            }, {
+              breakpoint: 375,
+              options: {
+                maxParticles: 50
+              }
+            }
+          ]
+        });
+      };
+
+
+       
+    </script>
+
+
+
+</body>
+
+</html>
