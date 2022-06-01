@@ -31,7 +31,7 @@
 
 <body class="select-none animate-text-focus-in">
     
-    <div class="us bg-cover h-screen w-screen relative justify-center items-center flex  " style="background-image: url(/assets/g16.6e491fd2.svg)"  >
+    <div class="us bg-cover h-screen w-screen relative justify-center items-center flex  " style="background-image: {% static 'images/g16.6e491fd2.svg' %}">
       
  <!-- <div class=" bg-gray-100 backdrop-filter bg-opacity-10 backdrop-blur-sm h-screen w-screen absolute ">  </div> -->
  <canvas class="background absolute "> </canvas>
@@ -46,38 +46,40 @@
             <div class="flex justify-center items-center pt-[rem] flex-col">
                 <!-- <input type="text" maxlength="20" placeholder=" Name "
                 class=" font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-red-400 focus:outline-none placeholder-gray-300 w-[] caret-red-400 " /> -->
+
+
+      <form method="POST" action="/login">  
+         {% csrf_token %}
+
             <input type="text" maxlength="30"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
             placeholder=" Username "
-            class="mt-[2rem] appearance-none text-white font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-fuchsia-400 focus:outline-none placeholder-gray-400 w-[]" />
+            name = "username"
+            class="mt-[2rem] appearance-none text-black font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-fuchsia-400 focus:outline-none placeholder-gray-400 w-[]" />
+
             <input type="password" placeholder=" Password "
-            class="mt-[2rem] text-white font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-teal-400 focus:outline-none placeholder-gray-400 w-[]" />
-            <p class=" font-mono text-lime-200 mt-[3%] cursor-pointer  ml-[10rem]">Forgot password?</p>
+            name = "password"
+            class="mt-[2rem] text-black font-mono bg-transparent border-t-0 border-r-0 border-l-0 border-2 border-teal-400 focus:outline-none placeholder-gray-400 w-[]" />
+            <br>
             <button onclick="us()"
-            class="mt-[1rem] bg-fuchsia-500 px-12 tracking-widest py-1 rounded-full text-white font-semibold hover:bg-fuchsia-400">
+            class="mt-[1rem] bg-fuchsia-500 px-12 tracking-widest py-1 rounded-full text-white font-semibold hover:bg-fuchsia-400 text-center">
             Log in
-        </button>
-       <a class="mt-8 py-1" href="us.html"> <span class="text-red-300  font-semibold italic">
+          </button>
+
+    </form>
+
+
+       <a class="mt-8 py-1" href="{% url 'sitee:registerUser' %}"> <span class="text-red-300  font-semibold italic">
 New User?
 
         </span> </a>
     </div>
 
-
-    <a href="us.html">
-        <p class="flex text-sky-200 font-semibold tracking-wider opacity-90 justify-center items-center mt-[3rem]">
-           Skip Login?
-        </p>
-    </a>
 </div>
 </div>
 
 </div>
 
-        
-        
-       
-        
         <script>
             VanillaTilt.init(document.querySelectorAll(".card"), {
                 max: 25,
@@ -111,12 +113,8 @@ New User?
           ]
         });
       };
-
-
-       
+     
     </script>
-
-
 
 </body>
 

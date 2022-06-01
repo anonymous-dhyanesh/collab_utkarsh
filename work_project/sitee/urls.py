@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 # App name to get clear pathing in href tags for the files paths. For example, href"{% url 'sitee:login" %}
+
 app_name = 'sitee'
 
 urlpatterns = [
